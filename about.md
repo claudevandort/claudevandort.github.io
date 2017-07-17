@@ -13,3 +13,5 @@ You can find the source code for the Jekyll new theme at:
 You can find the source code for Jekyll at
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll)
+
+To install execute `bundle install`, then `jekyll build --drafts --watch` and in a new tab `jekyll serve` and it will be running at [localhost:4000](http://localhost:4000)
