@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Fetching data from the Net"
+title:  "Android: Fetching data from the Net"
 date:   2017-08-16 20:40:00 -0300
 categories: android internet
 ---
@@ -97,6 +97,7 @@ public class NetworkUtils {
 }
 {% endhighlight %}
 
+# Making the request in a background thread using AsyncTask
 Now that we can make requests to the web and get the results, we need to build the url and execute the request to query github. Given that a request to the web might take an unknown amount of time, our app would freeze if we execute it in the main thread, so we need to do it in a background thread.
 
 To accomplish this we're going to use the construct AsyncTask which is a quite simple abstraction to use threads. We're going to declare the AsyncTask inside the MainActivity class as follows.
@@ -144,6 +145,7 @@ public class GithubQueryTask extends AsyncTask<String, Void, String>{
 }
 {% endhighlight %}
 
+# Wiring things up
 And last, in the MainActivity class we make the references to our UI elements and handle the search menu button click, to make it execute the task we just made and show the results.
 {% highlight java %}
 EditText mSearchQueryEditText;
